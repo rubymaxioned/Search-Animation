@@ -128,17 +128,18 @@ main { background-color: rgb(0,0,128,0.7); }
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;}
+  justify-content: center;
+}
 
 form { 
-  padding: 10px;
   display: flex;
-  background-color: #fff;
- }
+  justify-content: center;
+}
 
 .btn-image {
   min-width: 25px;
   min-height: 25px;
+  padding: 10px 20px;
   border: none;
   position: relative;
   background-color: #fff;
@@ -147,23 +148,34 @@ form {
 }
 
 .btn-image::before{
+  width: 100%;
+  display: inline-block;
   position: absolute;
   left: 0px;
   content: '\f002';
   font-family: "FontAwesome";
-  text-indent: 0;
   font-size: 18px;
-  display: inline-block;
-  width: 100%;
+  text-indent: 0;
 }
 
 input {
+  padding: 10px;
   border: none;
   outline: none;
 }
 
-.search-text { display: none; }
-.show { display: flex; }
+.search-text { 
+  width: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all .5s;
+}
+
+.show { 
+  width: 100%;
+  transform: scaleX(1);
+}
 
 /*=================================
   main styling ends here
