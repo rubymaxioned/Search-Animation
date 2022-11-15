@@ -162,9 +162,8 @@ input {
   outline: none;
 }
 
-
-
-
+.search-text { display: none; }
+.show { display: flex; }
 
 /*=================================
   main styling ends here
